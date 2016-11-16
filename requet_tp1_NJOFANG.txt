@@ -1,0 +1,45 @@
+
+
+1) Afficher les différentes bases de données:
+	psql -l
+
+2) Connection à la base de données
+	psql -h info -d booktown -U spi2219
+
+-Nombres de tables de booktown: \d+
+ 	23(23 rows) 
+
+3) Liste des commandes SQL:
+	\h
+
+4) l'aide pour la commande CREATE USER:
+	\h CREATE USER.
+
+5) afficher la liste des commandes PostgreSQL:
+	\?
+6)Connectez vous à la base de donnéesetu_employessans quitter l’environnement 
+PostgreSQL.
+	\c etu_employes
+
+7) Execute la commande Unix
+	\!
+
+Excercice 2
+
+1)  CREATE TABLE emp(idEmp int primary key, nEmp varchar(30), metier varchar(30), 
+idMgr int, dateEmb date, sal real, comm int NULL, idDep int, FOREIGN KEY (idDEP) REFERENCES dep);
+ 
+
+CREATE TABLE dep(idDep int primary key, nDep int, loc int);
+ CREATE TABLE grille(grade int primary key, sale_min int, sal_max int);
+
+
+3)SELECT nemp FROM emp WHERE metier= 'CLERK' OR metier='SALESMAN' OR metier='ANALYST';
+etu_employes=> SELECT DISTINCT  metier FROM EMP;
+
+c) SELECT nemp FROM emp WHERE nEmp like 'A%'; 
+d) SELECT nemp FROM emp WHERE nEmp like '%A%';
+
+e) SELECT nemp FROM emp WHERE  sal>1100;
+
+
